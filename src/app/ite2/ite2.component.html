@@ -1,0 +1,28 @@
+<div class=" fondd">
+  <div class="container" align="center">
+    <img src="../../assets/ite2.jpeg" alt="">
+
+    <h3>¿Te gustaría ganarte un Localizador Blue-On?</h3>
+    <h3>Déjanos tus datos</h3>
+    <div class="example-form">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre" [(ngModel)]="respuestas.nombre" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" >
+        <input matInput type="email" placeholder="Correo" [formControl]="emailFormControl" [errorStateMatcher]="matcher" [(ngModel)]="respuestas.correo">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput type="tel" placeholder="Celular" required [(ngModel)]="respuestas.celular">
+      </mat-form-field>
+
+      <br>
+      <button mat-raised-button (click)="guardar()" [disabled]="disabled">Guardar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="fondd">
+  <div class="container" align="center">
+    <img src="../../assets/ite1.jpeg" alt="">
+
+    <h3>¿Has realizado estrategias de Marqueting de Proximidad?</h3>
+    <mat-radio-group [(ngModel)]="respuestas.r1">
+      <mat-radio-button class="si" value="si">Si</mat-radio-button>
+      <mat-radio-button class="no" value="no">No</mat-radio-button>
+    </mat-radio-group>
+
+    <h3>¿Sabias que puedes usar las redes inalámbricas (Wi-Fi y Bluetooth)  como vehículo de comunicación con tu audiencia?</h3>
+    <mat-radio-group [(ngModel)]="respuestas.r2">
+      <mat-radio-button class="si" value="si">Si</mat-radio-button>
+      <mat-radio-button class="no" value="no">No</mat-radio-button>
+    </mat-radio-group>
+
+    <h3>¿¿Te interesaría tener una comunicación bidireccional con tu grupo objetivo?</h3>
+    <mat-radio-group [(ngModel)]="respuestas.r3">
+      <mat-radio-button class="si" value="si">Si</mat-radio-button>
+      <mat-radio-button class="no" value="no">No</mat-radio-button>
+    </mat-radio-group>
+    <br>
+
+    <button mat-raised-button (click)="guardar()" [disabled]="disabled">Guardar</button>
+  </div>
+</div>
